@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System;
 //open/closed Priciple
-namespace SOLID_Principles
+namespace OopsAndSolidPrinciples
 {
     //abstract class Shape to calculate the area
     public abstract class Shape

@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace OopsAndSolidPrinciples
 {
+   
     public class PaymentMethod
     {
         //overriding method
@@ -25,8 +26,11 @@ namespace ConsoleApp1
             Console.WriteLine($"The amount {amount} is credited by {method} on {date} ");
         }
     }
+
+    //creditcardpayment class 
     public class CreditCardPayment : PaymentMethod
     {
+        //method that overides the processPayment
         public override void processPayment(decimal amount)
         {
             Console.WriteLine($"The amount {amount} is credited using credit card");

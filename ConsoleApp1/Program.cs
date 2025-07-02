@@ -1,5 +1,6 @@
 ﻿
 using ConsoleApp1;
+using OopsAndSolidPrinciples;
 
 //Encapsulation
 
@@ -37,14 +38,14 @@ paymentMethod.processPayment(3000,"UPI",DateTime.Now);
 
 //Abstraction
 Document pdfDocument = new PdfDocument("report.pdf");
-pdfDocument.open();
-pdfDocument.readContent();
-pdfDocument.print();
+pdfDocument.OpeningTheDocument();
+pdfDocument.ReadContentOfTheDocument();
+pdfDocument.PrintTheDocument();
 
 
 Document wordDocument = new WordDocument("report.docx");
-wordDocument.open();
-wordDocument.readContent();
-wordDocument.print();
+wordDocument.OpeningTheDocument();
+wordDocument.ReadContentOfTheDocument();
+wordDocument.PrintTheDocument();
 
 

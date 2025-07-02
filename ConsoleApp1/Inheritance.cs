@@ -4,13 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace OopsAndSolidPrinciples
 {
+   
     public class BaseAccount
     {
+        //fields
         protected string accountNumber;
         protected decimal balance;
-        public String AccountNumber
+
+        //properties
+        public string AccountNumber
         {
             get; set;
         }
@@ -18,10 +22,14 @@ namespace ConsoleApp1
         {
             get; set;
         }
+
+        //method to deposit the amount
         public void Deposit(decimal amount)
         {
             balance += amount;
         }
+
+        //method to withdraw the amount
         public void Withdraw(decimal amount)
         {
             if (amount <= balance)
@@ -31,10 +39,12 @@ namespace ConsoleApp1
         }
     }
 
+    //SavingsAccount that inherits the parent class
     public class SavingsAccount : BaseAccount
     {
         private decimal interestRate = 0.5m;
 
+        //method to apply interest in the savings account.
         public void applyInterest()
         {
             decimal interest = balance * interestRate;
